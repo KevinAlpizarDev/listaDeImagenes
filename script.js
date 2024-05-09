@@ -63,9 +63,9 @@ function showInfo() {
 
 
             <td>
-                <button class="btn btn-success" onclick="readInfo('${element.picture}', '${element.employeeName}', '${element.employeeAge}', '${element.employeeCity}', '${element.employeeEmail}', '${element.employeePhone}', '${element.employeePost}', '${element.startDate}')" data-bs-toggle="modal" data-bs-target="#readData"><i class="bi bi-eye"></i></button>
+                <button class="btn btn-success" onclick="readInfo('${element.picture}', '${element.employeeName}', '${element.employeeCity}', '${element.employeeEmail}' data-bs-toggle="modal" data-bs-target="#readData"><i class="bi bi-eye"></i></button>
 
-                <button class="btn btn-primary" onclick="editInfo(${index}, '${element.picture}', '${element.employeeName}', '${element.employeeAge}', '${element.employeeCity}', '${element.employeeEmail}', '${element.employeePhone}', '${element.employeePost}', '${element.startDate}')" data-bs-toggle="modal" data-bs-target="#userForm"><i class="bi bi-pencil-square"></i></button>
+                <button class="btn btn-primary" onclick="editInfo(${index}, '${element.picture}', '${element.employeeName}', '${element.employeeCity}', '${element.employeeEmail}')" data-bs-toggle="modal" data-bs-target="#userForm"><i class="bi bi-pencil-square"></i></button>
 
                 <button class="btn btn-danger" onclick="deleteInfo(${index})"><i class="bi bi-trash"></i></button>
                             
@@ -90,7 +90,7 @@ function readInfo(pic, name, age, city, email, phone, post, sDate) {
 }
 
 
-function editInfo(index, pic, name, Age, City, Email, Phone, Post, Sdate) {
+function editInfo(index, pic, name, Age, City, Email) {
     isEdit = true
     editId = index
     imgInput.src = pic
