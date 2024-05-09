@@ -1,13 +1,15 @@
+"use strict";
+
+
+
+
 var form = document.getElementById("myForm"),
     imgInput = document.querySelector(".img"),
     file = document.getElementById("imgInput"),
     userName = document.getElementById("name"),
-    age = document.getElementById("age"),
-    city = document.getElementById("city"),
     email = document.getElementById("email"),
-    phone = document.getElementById("phone"),
-    post = document.getElementById("post"),
-    sDate = document.getElementById("sDate"),
+    city = document.getElementById("city"),
+
     submitBtn = document.querySelector(".submit"),
     userInfo = document.getElementById("data"),
     modal = document.getElementById("userForm"),
