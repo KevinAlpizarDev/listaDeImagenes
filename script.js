@@ -1,5 +1,3 @@
-"use strict";
-
 
 
 
@@ -7,9 +5,12 @@ var form = document.getElementById("myForm"),
     imgInput = document.querySelector(".img"),
     file = document.getElementById("imgInput"),
     userName = document.getElementById("name"),
-    email = document.getElementById("email"),
+    age = document.getElementById("age"),
     city = document.getElementById("city"),
-
+    email = document.getElementById("email"),
+    // phone = document.getElementById("phone"),
+    // post = document.getElementById("post"),
+    // sDate = document.getElementById("sDate"),
     submitBtn = document.querySelector(".submit"),
     userInfo = document.getElementById("data"),
     modal = document.getElementById("userForm"),
@@ -58,9 +59,7 @@ function showInfo() {
             <td>${element.employeeAge}</td>
             <td>${element.employeeCity}</td>
             <td>${element.employeeEmail}</td>
-            <td>${element.employeePhone}</td>
-            <td>${element.employeePost}</td>
-            <td>${element.startDate}</td>
+     
 
 
             <td>
@@ -84,10 +83,10 @@ function readInfo(pic, name, age, city, email, phone, post, sDate) {
         document.querySelector('#showName').value = name,
         document.querySelector("#showAge").value = age,
         document.querySelector("#showCity").value = city,
-        document.querySelector("#showEmail").value = email,
-        document.querySelector("#showPhone").value = phone,
-        document.querySelector("#showPost").value = post,
-        document.querySelector("#showsDate").value = sDate
+        document.querySelector("#showEmail").value = email
+        // document.querySelector("#showPhone").value = phone,
+        // document.querySelector("#showPost").value = post,
+        // document.querySelector("#showsDate").value = sDate
 }
 
 
@@ -99,9 +98,7 @@ function editInfo(index, pic, name, Age, City, Email, Phone, Post, Sdate) {
     age.value = Age
     city.value = City
     email.value = Email,
-        phone.value = Phone,
-        post.value = Post,
-        sDate.value = Sdate
+      
 
     submitBtn.innerText = "Update"
     modalTitle.innerText = "Update The Form"
@@ -126,9 +123,7 @@ form.addEventListener('submit', (e) => {
         employeeAge: age.value,
         employeeCity: city.value,
         employeeEmail: email.value,
-        employeePhone: phone.value,
-        employeePost: post.value,
-        startDate: sDate.value
+  
     }
 
     if (!isEdit) {
@@ -150,6 +145,6 @@ form.addEventListener('submit', (e) => {
 
     imgInput.src = "./image/Profile Icon.webp"
 
-    // modal.style.display = "none"
-    // document.querySelector(".modal-backdrop").remove()
+    modal.style.display = "none"
+    document.querySelector(".modal-backdrop").remove()
 })
