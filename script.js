@@ -5,7 +5,7 @@ var form = document.getElementById("myForm"),
     imgInput = document.querySelector(".img"),
     file = document.getElementById("imgInput"),
     userName = document.getElementById("name"),
-    age = document.getElementById("age"),
+    // age = document.getElementById("age"),
     city = document.getElementById("city"),
     email = document.getElementById("email"),
     // phone = document.getElementById("phone"),
@@ -56,7 +56,7 @@ function showInfo() {
             <td>${index + 1}</td>
             <td><img src="${element.picture}" alt="" width="50" height="50"></td>
             <td>${element.employeeName}</td>
-            <td>${element.employeeAge}</td>
+         
             <td>${element.employeeCity}</td>
             <td>${element.employeeEmail}</td>
      
