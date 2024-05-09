@@ -5,12 +5,10 @@ var form = document.getElementById("myForm"),
     imgInput = document.querySelector(".img"),
     file = document.getElementById("imgInput"),
     userName = document.getElementById("name"),
-    // age = document.getElementById("age"),
+
     city = document.getElementById("city"),
     email = document.getElementById("email"),
-    // phone = document.getElementById("phone"),
-    // post = document.getElementById("post"),
-    // sDate = document.getElementById("sDate"),
+
     submitBtn = document.querySelector(".submit"),
     userInfo = document.getElementById("data"),
     modal = document.getElementById("userForm"),
@@ -78,29 +76,27 @@ function showInfo() {
 showInfo()
 
 
-function readInfo(pic, name, age, city, email, phone, post, sDate) {
+function readInfo(pic, name, city, email) {
     document.querySelector('.showImg').src = pic,
         document.querySelector('#showName').value = name,
-        document.querySelector("#showAge").value = age,
+
         document.querySelector("#showCity").value = city,
         document.querySelector("#showEmail").value = email
-        // document.querySelector("#showPhone").value = phone,
-        // document.querySelector("#showPost").value = post,
-        // document.querySelector("#showsDate").value = sDate
+
 }
 
 
-function editInfo(index, pic, name, Age, City, Email) {
+function editInfo(index, pic, name, City, Email) {
     isEdit = true
     editId = index
     imgInput.src = pic
     userName.value = name
-    age.value = Age
+
     city.value = City
     email.value = Email,
-      
 
-    submitBtn.innerText = "Update"
+
+        submitBtn.innerText = "Update"
     modalTitle.innerText = "Update The Form"
 }
 
@@ -120,10 +116,10 @@ form.addEventListener('submit', (e) => {
     const information = {
         picture: imgInput.src == undefined ? "./image/Profile Icon.webp" : imgInput.src,
         employeeName: userName.value,
-        employeeAge: age.value,
+
         employeeCity: city.value,
         employeeEmail: email.value,
-  
+
     }
 
     if (!isEdit) {
